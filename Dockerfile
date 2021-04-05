@@ -6,9 +6,13 @@ RUN pip install --upgrade  pip
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
-RUN apt-get update && apt-get -y install ghostscript
+RUN apt-get update && apt-get -y install \
+    ghostscript \
+    groff \
+    jq
 
 RUN pip install jupyterlab==3.0.12 --upgrade
+
 RUN jupyter labextension install \
     @axlair/jupyterlab_vim \
     @lckr/jupyterlab_variableinspector
