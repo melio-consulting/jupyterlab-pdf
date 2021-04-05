@@ -1,6 +1,6 @@
 camelot-py[cv]==0.8.2
 boto3==1.15.2
-textract==1.6.3
+textract
 tqdm==4.59.0
 nbstripout==0.3.9
 pymupdf==1.18.10
